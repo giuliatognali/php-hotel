@@ -39,7 +39,7 @@
         ],
 
     ];
-    var_dump($hotels)
+    //var_dump($hotels)
 ?>
 
 <!DOCTYPE html>
@@ -52,5 +52,19 @@
 </head>
 <body>
     <h1>Hotels</h1>
+    <ul>
+        <?php foreach($hotels as $hotel) {?>
+        <li>
+            <h3>
+                <?php echo $hotel['name']; ?>
+            </h3>
+            <p> <?php echo $hotel['description']; ?></p>
+            <p>Parcheggio:<?php echo $hotel['parking']; ?></p>
+            <p>Voto: <?php echo $hotel['vote']; ?></p>
+            <p>Distanza dal centro: <?php echo $hotel['distance_to_center']; ?> km</p>
+        
+        </li>
+        <?php } ?>
+    </ul>
 </body>
 </html>
