@@ -82,6 +82,8 @@ $hotels = [
     </tr>
   </thead>
   <tbody>
+
+  <?php foreach ($hotels as $hotel) : ?>
     <tr>
       <td><?php echo $hotel['name']; ?></td>
       <td><?php echo $hotel['description']; ?></td>
@@ -89,8 +91,11 @@ $hotels = [
       <td><?php echo $hotel['vote']; ?>/5</td>
       <td><?php echo $hotel['distance_to_center']; ?> km</td>
     </tr>
+    <?php endforeach; ?>
+    
   </tbody>
 </table>
+
 </body>
 
 </html>
